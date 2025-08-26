@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const next_1 = __importDefault(require("next"));
 const express_1 = __importDefault(require("express"));
 const routes_1 = __importDefault(require("./routes"));
-const port = parseInt(process.env.PORT || '3000', 10);
+const port = parseInt(process.env.PORT || '80', 443);
 const dev = process.env.NODE_ENV !== 'production';
 const app = (0, next_1.default)({ dev: process.env.NODE_ENV !== 'production' });
 const handler = routes_1.default.getRequestHandler(app);
@@ -15,7 +15,7 @@ app.prepare().then(() => {
     const expressApp = (0, express_1.default)();
     expressApp.disable('x-powered-by');
     expressApp.use(handler).listen(port);
-    console.log(`> Server listening at http://localhost:${port} as ${dev ? 'development' : process.env.NODE_ENV}`);
+    console.log(`> Server listening at http*://*/*:${port} as ${dev ? 'development' : process.env.NODE_ENV}`);
 })
     .catch((e) => {
     console.log('Something went wrong: ', e);
