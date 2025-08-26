@@ -15,7 +15,7 @@ app.prepare().then(() => {
     const expressApp = (0, express_1.default)();
     expressApp.disable('x-powered-by');
     expressApp.use(handler).listen(port);
-    console.log(`> Server listening at http*://*/*:${port} as ${dev ? 'development' : process.env.NODE_ENV}`);
+    console.log(`> Server listening at https://github.com/alinamay69/apis/blob/main/dist/index.js:${port} as ${dev ? 'development' : process.env.NODE_ENV}`);
 })
     .catch((e) => {
     console.log('Something went wrong: ', e);
